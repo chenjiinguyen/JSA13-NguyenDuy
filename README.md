@@ -1,33 +1,46 @@
 # JSA13 - Nguyen Duy
 
-## Khoi Tao Git
-```
-git init
-```
+# JSA12
 
-## Xac dinh danh tinh
-```
+## Xác nhận danh tính
+
 git config --global user.name "chenjiinguyen"
 git config --global user.email "duyntp2000@gmail.com"
-```
 
-## Them file vao change cua Git
-```
-git add <Ten file>
+
+## Kiểm tra phiên bản Git
+
+git --version
+
+## Khởi tạo Git
+
+git init
+
+## Thêm File vào phiên bản
+
+git add <tên file>
 
 git add .
-```
 
-## Xac nhan su thay doi cho git
-```
-git commit -m "Create Buoi1"
-```
+## Xác nhận phiên bản
 
-## Trinh tu day code len Github
+git commit -m "Upload Buoi1"
+
+## Đẩy dữ liệu lên Github
+
+git push
+
+## Các bước up dữ liệu lên Github
 
 ```
 git add .
-git commit -m "Update README.md"
+git commit -m "Upload Buoi1"
 git push
 ```
 
+## Link Github
+
+https://github.com/GipsyDanger01/JSA13-BaoHuynh
+https://github.com/Edwardtran123/JSA13-ManhTran
+https://github.com/Rugion1710/JSA13-QuanNguyen
+https://github.com/Kedinzz/JSA13-NguyenCongMinh
