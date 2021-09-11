@@ -23,5 +23,11 @@ git add .
 git commit -m "Create Buoi1"
 ```
 
+## Trinh tu day code len Github
 
+```
+git add .
+git commit -m "Update README.md"
+git push
+```
 
