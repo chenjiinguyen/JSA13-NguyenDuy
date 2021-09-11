@@ -1,7 +1,5 @@
 # JSA13 - Nguyen Duy
 
-# JSA12
-
 ## Xác nhận danh tính
 
 git config --global user.name "chenjiinguyen"
