@@ -18,4 +18,10 @@ git add <Ten file>
 git add .
 ```
 
+## Xac nhan su thay doi cho git
+```
+git commit -m "Create Buoi1"
+```
+
+
 
