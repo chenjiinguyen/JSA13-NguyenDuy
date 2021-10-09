@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="input">
+        <input id="todo" type="text" value=""/>
+        <button id="add">Add</button>
+        <button id="clear">Clear</button>
+    </div>
+    <div>
+        <ul id="result">
+            <li>ABC</li>
+        </ul>
+    </div>
+    <script>
+        // string : number
+        let object = {
+            a : 2,
+            b: 4
+        };
+        let x = JSON.stringify(object);
+        
+        localStorage.setItem("a",x)
+        // string => array,object
+        let r = JSON.parse(x)
+        alert(r)
+
+        let li = document.createElement("li");
+        li.innerHTML = "ABCÁDSAĐA"
+        document.getElementById("result").appendChild(li)
+        
+    </script>
+</body>
+</html>
