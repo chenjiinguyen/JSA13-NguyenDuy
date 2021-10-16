@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="a" type="number">
+    <input id="b" type="number">
+    <button id="+">+</button>
+    <button id="-">-</button>
+    <button id="*">*</button>
+    <button id="/">/</button>
+    <input id="result" type="text">
+    <div>
+        <ul id="data">
+
+        </ul>
+    </div>
+    <script>
+        let key = "mt"
+        let a = document.getElementById("a");
+        let b = document.getElementById("b");
+        let result = document.getElementById("result");
+        let btn_plus = document.getElementById("+");
+        let data = document.getElementById("data");
+
+        btn_plus.addEventListener("click", function(){
+            let value = parseInt(a.value) + parseInt(b.value);
+            result.value = value;
+            // Thực hiện quá trình thêm todo vào LocalStorage
+            let mt_storage = []
+            // Lấy dữ liệu từ LocalStorage (dạng String JSON)
+            let arr_string = localStorage.getItem(key);
+            // Xem nó có tồn tại hay không ??
+            if( arr_string != null)
+            {
+                // Nếu có thì chuyển từ String JSON sang Array
+                mt_storage = JSON.parse(arr_string);
+            }
+            // Thêm dữ liệu vào Array
+            let string_value = a.value + "+" + b.value + "=" + result.value;
+            mt_storage.push(string_value);
+            // Chuyển Array thành String JSON
+            arr_string = JSON.stringify(mt_storage);
+            // Lưu dữ liệu String JSON vào LocalStorage
+            localStorage.setItem(key,arr_string);
+            
+            Render();
+        });
+
+        Render();
+
+        // Lấy dữ liệu từ LocalStorage thành dạng List HTML (UL LI)
+        function Render(){
+            // Thực hiện quá trình thêm todo vào LocalStorage
+            let mt_storage = []
+            // Lấy dữ liệu từ LocalStorage (dạng String JSON)
+            let arr_string = localStorage.getItem(key);
+            // Xem nó có tồn tại hay không ??
+            if( arr_string != null)
+            {
+                // Nếu có thì chuyển từ String JSON sang Array
+                mt_storage = JSON.parse(arr_string);
+            }
+            // Xóa dữ liệu của Result
+            data.innerHTML = "";
+
+            for(let i = 0; i < mt_storage.length;i++){
+                let li = document.createElement("li");
+                li.innerHTML = mt_storage[i];
+                data.appendChild(li);
+            }
+        }
+
+    </script>
+</body>
+</html>
